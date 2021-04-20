@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="">
+  
+  <description>
+    This is the Ant build file for the hcmcIcons project.
+    It will build a variety of products including sprite files.
+  </description>
+  
+  <!-- Make CLI output readable. -->
+  <property name="echoDivider" value="*****************************************"/>
+  
+  <!-- We're sure to need ant contrib. -->
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+  
+  <!-- XSLT processor. -->
+  <property name="saxon" value="${basedir}/lib/saxon-he-10.5.jar"/>
+  
+  <target name="clean">
+    <description>
+      TARGET clean
+      Removes all previous build products.
+    </description>
+    <echo message="${echoDivider}"/>
+    <echo message="Cleaning out previous build products."/>
+    <delete dir="${basedir}/products"/>
+    <mkdir dir="${basedir}/products"/>
+  </target>
+  
+</project>
